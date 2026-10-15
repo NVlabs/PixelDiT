@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pixeldit"
+version = "0.1.0"
+description = "PixelDiT and PixelDiT2 model definitions (pixel-space diffusion transformers)"
+readme = "README.md"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "numpy",
+]
+
+[project.optional-dependencies]
+# PixelDiT2's grounding encoder (pixdit_core.grounding) creates its DINOv3 backbone with timm.
+pixeldit2 = ["timm"]
+
+[project.urls]
+Homepage = "https://github.com/NVlabs/PixelDiT"
+
+[tool.setuptools]
+packages = ["pixdit_core"]
