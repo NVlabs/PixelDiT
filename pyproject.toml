@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=64"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,10 +7,8 @@ name = "pixdit-core"
 version = "0.1.0"
 description = "PixelDiT and PixelDiT2 model definitions (pixel-space diffusion transformers)"
 readme = "README.md"
-license = { file = "LICENSE" }
+license-files = ["LICENSE", "NOTICE"]
 requires-python = ">=3.10"
-# Only what the model definitions import. Training, sampling and evaluation scripts (c2i/, t2i/, tools/)
-# are not part of the package; they keep using requirements-pixeldit1.txt / requirements-pixeldit2.txt.
 dependencies = [
     "torch",
     "numpy",
