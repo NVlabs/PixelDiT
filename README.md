@@ -2,7 +2,7 @@
   <img src="assets/pixeldit-logo.png" alt="PixelDiT" width="360">
 </p>
 
-<h1 align="center">PixelDiT &amp; PixelDiT2</h1>
+<h1 align="center"><a href="https://pixeldit.github.io/">PixelDiT </a> &amp;  <a href="https://pixeldit.github.io/pixeldit2/">PixelDiT2 </a> </h1>
 <p align="center"><strong>Pixel-space diffusion transformers for image generation</strong></p>
 <p align="center">NVIDIA · University of Rochester</p>
 
@@ -17,8 +17,7 @@
 | **PixelDiT2: Representation-Grounded Pixel Diffusion Transformers** | **NeurIPS 2026** | <a href="https://pixeldit.github.io/pixeldit2/"><img src="https://img.shields.io/badge/%F0%9F%8C%90_-Project-2ea44f" alt="Project"></a> <a href="https://arxiv.org/abs/2609.24919"><img src="https://img.shields.io/badge/%F0%9F%93%84_-arXiv-b31b1b.svg" alt="arXiv"></a> <a href="https://huggingface.co/nvidia/PixelDiT2-ImageNet"><img src="https://img.shields.io/badge/%F0%9F%A4%97_Model-ImageNet-yellow" alt="ImageNet models"></a> |
 | **PixelDiT: Pixel Diffusion Transformers for Image Generation** | **CVPR 2026 Oral**<br><a href="https://paperswithcode.co/conferences/cvpr-2026/best-paper-finalists"><img src="https://img.shields.io/badge/%F0%9F%8F%86_CVPR_2026-Best_Paper_Finalist-gold" alt="CVPR 2026 Best Paper Finalist"></a> | <a href="https://pixeldit.github.io/"><img src="https://img.shields.io/badge/%F0%9F%8C%90_-Project-2ea44f" alt="Project"></a> <a href="https://arxiv.org/abs/2511.20645"><img src="https://img.shields.io/badge/%F0%9F%93%84_-arXiv-b31b1b.svg" alt="arXiv"></a> <a href="https://huggingface.co/nvidia/PixelDiT-ImageNet"><img src="https://img.shields.io/badge/%F0%9F%A4%97_Model-ImageNet-yellow" alt="ImageNet models"></a> <a href="https://huggingface.co/nvidia/PixelDiT-1300M-1024px"><img src="https://img.shields.io/badge/%F0%9F%A4%97_Model-T2I-yellow" alt="T2I model"></a><br> <a href="https://huggingface.co/Comfy-Org/PixelDiT"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fhuggingface.co%2Fapi%2Fmodels%2FComfy-Org%2FPixelDiT%3Fexpand%3DdownloadsAllTime&query=%24.downloadsAllTime&label=%F0%9F%A4%97%20Comfy-Org%2FPixelDiT%20downloads&color=yellow" alt="Comfy-Org/PixelDiT downloads"></a>  |
 
-<details>
-<summary>Authors</summary>
+## Authors
 
 **PixelDiT2**
 
@@ -37,13 +36,14 @@
 [Shiqiu Liu](http://behindthepixels.io/) ·
 [Jiebo Luo](https://www.cs.rochester.edu/u/jluo/)
 
-NVIDIA · University of Rochester. Project lead and main advisor: Wei Xiong.
+**Affiliation**: NVIDIA · University of Rochester
 
-</details>
+**Project lead and main advisor**: [Wei Xiong](https://wxiong.me/)
+
 
 ## News
 
-- **2026/09** — [PixelDiT2](https://pixeldit.github.io/pixeldit2/) is accepted to **NeurIPS 2026**.
+- **2026/09** — [PixelDiT2](https://pixeldit.github.io/pixeldit2/) is accepted to **NeurIPS 2026**, a representation-grounded pixel diffusion model that converges much faster.
 - **2026/06** — PixelDiT is a **CVPR 2026 Best Paper Finalist**.
 - **2026/06** — Added [post-modulation for PiT blocks](c2i/README.md#training-stability-post-modulation-for-pit-blocks) to improve training stability.
 - **2026/04** — PixelDiT training and inference code, and pretrained models, are released.
@@ -53,6 +53,11 @@ NVIDIA · University of Rochester. Project lead and main advisor: Wei Xiong.
 <a id="pixeldit2"></a>
 <a id="pixeldit"></a>
 <a id="performance"></a>
+
+## Introduction
+**PixelDiT** is a series of work on pixel-space generative modeling, aiming to remove the need of VAEs which are widely used in traditional latent generative models and perform geneartion directly in pixel space. 
+- **[PixelDiT](https://pixeldit.github.io/)**: Our first pixel-space diffusion models. We release both the models on ImageNet and a 1.3B Text-to-Image model that can generate 1024x1024 resolution images.
+- **[PixelDiT2](https://pixeldit.github.io/pixeldit2/)**: We have a deeper investigation on how representation learning can guide the content generation for pixel diffusion. We propose to use representations to ground the generation process. It converges significantly faster and obtains better results on ImageNet. Please read the details in our [paper](https://arxiv.org/pdf/2609.24919). 
 
 ## Models and results
 
