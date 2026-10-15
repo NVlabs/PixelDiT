@@ -3,7 +3,7 @@ requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pixdit-core"
+name = "pixeldit"
 version = "0.1.0"
 description = "PixelDiT and PixelDiT2 model definitions (pixel-space diffusion transformers)"
 readme = "README.md"
