@@ -119,6 +119,25 @@ Choose a matching checkpoint and configuration in the
 | PixelDiT2 | `pixeldit2_h16_in256.yaml`, `pixeldit2_h16_in512.yaml` | [Inference](c2i/README.md#pixeldit2-inference) |
 | PixelDiT | `pix256_xl.yaml`, `pix512_xl.yaml` | [Inference](c2i/README.md#pixeldit-inference) |
 
+### Use the model definitions in another project
+
+The model code in `pixdit_core` can be installed with pip:
+
+```bash
+python -m pip install "git+https://github.com/NVlabs/PixelDiT"
+# PixelDiT2's grounding encoder also needs timm:
+python -m pip install "pixeldit[pixeldit2] @ git+https://github.com/NVlabs/PixelDiT"
+```
+
+Append `@<commit>` to the URL to pin a version. The package is named `pixeldit`
+and is imported as `pixdit_core`:
+
+```python
+from pixdit_core.pixeldit_t2i import PixDiT_T2I    # PixelDiT text-to-image
+from pixdit_core.pixeldit_c2i import PixDiT        # PixelDiT class-to-image
+from pixdit_core.pixeldit2_c2i import PixelDiT2    # PixelDiT2 class-to-image
+```
+
 ## Repository Structure
 
 ```
