@@ -44,7 +44,7 @@
 ## News
 
 - **2026/09** — [PixelDiT2](https://pixeldit.github.io/pixeldit2/) is accepted to **NeurIPS 2026**, a representation-grounded pixel diffusion model that converges much faster.
-- **2026/06** — PixelDiT is a **CVPR 2026 Best Paper Finalist**.
+- **2026/06** — [PixelDiT](https://pixeldit.github.io/) is a **CVPR 2026 Best Paper Finalist**.
 - **2026/06** — Added [post-modulation for PiT blocks](c2i/README.md#training-stability-post-modulation-for-pit-blocks) to improve training stability.
 - **2026/04** — PixelDiT training and inference code, and pretrained models, are released.
 - **2026/02** — PixelDiT is accepted to **CVPR 2026 Oral**.
