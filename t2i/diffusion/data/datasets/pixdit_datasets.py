@@ -491,13 +491,14 @@ class PixDiTWebDatasetMS(PixDiTWebDataset):
             vae_downsample_rate=32,
             **kwargs,
         )
-        self.base_size = int(kwargs["aspect_ratio_type"].split("_")[-1])
-        self.aspect_ratio = eval(kwargs.pop("aspect_ratio_type"))
+        aspect_ratio_type = kwargs.pop("aspect_ratio_type")
+        self.base_size = int(aspect_ratio_type.split("_")[-1])
+        self.aspect_ratio = eval(aspect_ratio_type)
         self.ratio_index = {}
         self.ratio_nums = {}
         self.interpolate_model = (
             InterpolationMode.BICUBIC
-            if self.aspect_ratio not in [ASPECT_RATIO_2048, ASPECT_RATIO_2880]
+            if aspect_ratio_type not in ["ASPECT_RATIO_2048", "ASPECT_RATIO_2880"]
             else InterpolationMode.LANCZOS
         )
 
@@ -680,7 +681,9 @@ class PixelDatasetMS(PixDiTWebDataset):
             self.ratio_nums[float(k)] = 0
 
         self.interpolate_model = (
-            InterpolationMode.BICUBIC if self.aspect_ratio not in [ASPECT_RATIO_2048, ASPECT_RATIO_2880] else InterpolationMode.LANCZOS
+            InterpolationMode.BICUBIC
+            if aspect_ratio_type not in ["ASPECT_RATIO_2048", "ASPECT_RATIO_2880"]
+            else InterpolationMode.LANCZOS
         )
 
         self.closest_ratio = 1.0
